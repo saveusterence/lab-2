@@ -45,7 +45,13 @@ def main():
 def count(user):
     total =0
     for x in range(len(user)):
-        total += user[x]
+        if user[x] == 1:
+            if total < 11:
+                total + 11
+            else:
+                total +1
+        else:
+            total += user[x]
     if total == 21:
         return 1
     elif total > 21:
@@ -61,8 +67,6 @@ def cards():
     return x
 def draw(user):
     card = cards()
-    #if card == 1 or card == 11:
-        #card = "Ace"
     user.append(card)
     return
 
