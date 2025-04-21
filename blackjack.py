@@ -14,13 +14,14 @@ def main():
         print(f"Your cards are {player[x]}")
     while hits < 3 and hos != 'S':
         hos = input(f"{name} would you like to hit(H) or stand(S)").upper()
-        hits += 1
         match hos:
             case 'H':
+                hits += 1
                 draw(player)
                 print("You drew a ", player[hits+1])
                 print(player)
             case 'S':
+                hits += 1
                 print("The dealers second card is ",dealer[1])
             case _:
                 print("Error")
