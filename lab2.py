@@ -1,6 +1,6 @@
 def main():
-    h = input("Enter your Height: \n")
-    w= input("Enter your Weight: \n")
+    h = float(input("Enter your Height: "))
+    w= float(input("Enter your Weight: "))
     bmirange(bmi(h,w))
 def bmi(height,weight):
     print("The height is " + str(height))
